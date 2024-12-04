@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Update</title>
+    <style>
+        * {
+margin:0%;
+box-sizing: border-box;
+font-size: "Roboto Slab", serif;
+}
+.sec1 {
+    margin-left: 20px;
+    background: linear-gradient(to left , magenta ,aqua);
+    display: flex;
+    flex-direction: row;
+    width:100vw;
+    height:100vw;
+}
+#myform{
+    margin-top: 7%;
+    margin-left: 15%;
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    width:70%;
+    height: 50%;
+}
+#myform label {
+    margin-left: 15px;
+    margin-top: 3%;
+}
+input[type="text"]{
+    border: none;
+    border-radius: 10px;
+    box-shadow: 1px 1px #e03ec0;
+    padding :2%;
+    margin-bottom: 5%;
+    width:50%;
+    margin-left: 15px;
+}
+.button {
+    margin-left: 20px;
+    width: 90%;
+    border-radius: 50px;
+    font-size: 20px;
+    color:white;
+    background: linear-gradient(to left , magenta ,aqua);
+    margin-bottom: 2%;
+    margin-top: 2%;
+}
+.button:hover {
+    color:blue;
+    background-color: white;
+    border: 1.5px solid blue;
+}
+a{
+    text-decoration: none;
+    color:white;
+}
+    </style>
+</head>
+<body>
+    <section class="sec1">
+        <form method="POST" id="myform"><br><br>
+        <center>
+        <h1><label><b>Updating Question and Answer</b></label></h1><br><br><br>
+        <label>Question</label>
+        <input type="text" name="question"/><br>
+        <label>Answer</label>
+        <input type="text" name="answer"/>
+    </center>
+    <button class="button">Submit</button>
+    </form>
+    </section>
+</body>
+</html>

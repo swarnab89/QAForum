@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Creating Page for User </title>
+    <style>
+* {
+    margin:0%;
+    box-sizing: border-box;
+    font-size: "Roboto Slab", serif;
+}
+.sec1 {
+    margin-left: 20px;
+    background: linear-gradient(to left , magenta ,aqua);
+    display: flex;
+    flex-direction: row;
+    width:100vw;
+    height:100vw;
+}
+.one {
+    width:50%;
+    align-items: center;
+}
+.one #myform{
+    margin-top: 7%;
+    margin-left: 70%;
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    width:70%;
+    height: 50%;
+}
+#hi {
+    margin-top:15px;
+    font-size: 30px;
+    text-align: center;
+    color: black;
+}
+#myform label {
+    margin-left: 15px;
+    margin-top: 3%;
+}
+input[type="text"],[type="email"],[type="password"],[type='number']{
+    border: none;
+    border-radius: 10px;
+    box-shadow: 1px 1px #e03ec0;
+    padding :1%;
+    margin-bottom: 5%;
+    width:50%;
+    margin-left: 15px;
+}
+.button {
+    margin-left: 15px;
+    width: 90%;
+    border-radius: 50px;
+    font-size: 20px;
+    color:white;
+    background: linear-gradient(to left , magenta ,aqua);
+    margin-bottom: 2%;
+    margin-top: 2%;
+}
+.web {
+    text-decoration: none;
+    text-align: center;
+    margin-left: 15px;
+    width: 90%;
+    border-radius: 50px;
+    font-size: 20px;
+    color:white;
+    background: linear-gradient(to left , magenta ,aqua);
+    margin-bottom: 2%;
+    margin-top: 2%;
+    border:solid 2px black;
+}
+.button:hover {
+    color:blue;
+    background-color: white;
+    border: 1.5px solid blue;
+}
+.web:hover {
+    color:blue;
+    background-color: white;
+    border: 1.5px solid blue;
+}
+.hi {
+    margin-top: 5%;
+    text-align: center;
+    font-size: 14px;
+}
+.big {
+    text-align: center;
+    text-decoration: none;
+}
+</style>
+</head>
+<body>
+<section class="sec1">
+    <div class="one">
+    <form method="POST" id="myform"><br>
+    <center><h1>Creating An User Account</h1><br><br></center>
+    <label></i><b>User Name</b></label><br>
+    <input type="text" name="uname" placeholder="Ex:Swarna" class="name"/>
+    <label><b>User Email</b></label><br>
+    <input type="email" name="uemail" placeholder="Ex:swarna@gmail.com" class="email"/>
+    <label><b>Mobile Number</b></label><br>
+    <input type="number" name="unumber" placeholder="Ex:9087654321" class="phone number"/>
+    <label><b>Password</b></label><br>
+    <input type="password" name="upassword" placeholder="hi@123" class="password"/><br>
+    <button class="button">Submit</button><br/>
+    </form>
+    </div>
+</section>
+</body>
+</html>

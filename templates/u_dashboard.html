@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Dashboard</title>
+    <style>
+* {
+    margin:0%;
+    box-sizing: border-box;
+    font-size: "Roboto Slab", serif;
+}
+.sec1 {
+    margin-left: 20px;
+    background: linear-gradient(to left , magenta ,aqua);
+    display: flex;
+    flex-direction: row;
+    width:100vw;
+    height:100vw;
+}
+.one {
+    width:50%;
+    align-items: center;
+}
+.one #myform{
+    margin-top: 7%;
+    margin-left: 70%;
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    width:70%;
+    height: 45%;
+}
+.un {
+    text-decoration: none;
+    font-weight: bolder;
+    margin-left: 15px;
+    padding-left: 40%;
+    margin-top: 3%;
+}
+.button{
+    margin-left: 15px;
+    width: 90%;
+    border-radius: 50px;
+    font-size: 20px;
+    color:white;
+    background: linear-gradient(to left , magenta ,aqua);
+    margin-bottom: 2%;
+    margin-top: 2%;
+}
+.button:hover {
+    color:blue;
+    background-color: white;
+    border: 1.5px solid blue;
+}
+
+</style>
+</head>
+<body>
+<section class="sec1">
+    <div class="one">
+    <div id="myform"><br><br>
+    <center><h1>Welcome To Dashboard</h1></center><br><br>
+    <center><h3><b>Questions and Answers</b></h3></center><br><br>
+    <a href="{{url_for('create',uemail=uemail)}}" class="un">Create</a><br><br>
+    <a href="{{url_for('view',uemail=uemail)}}" class="un">Read</a><br><br>
+    <a href="{{url_for('delete',uemail=uemail)}}" class="un">Delete</a><br><br>
+    <a href="{{url_for('logout')}}"><button class="button">Logout</button></a>
+    </div>
+</div>
+</section>
+</body>
+</html>

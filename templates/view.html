@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View</title>
+    <style>
+        * {
+    margin:0%;
+    box-sizing: border-box;
+    font-size: "Roboto Slab", serif;
+}
+.sec1 {
+    margin-left: 20px;
+    background: linear-gradient(to left , magenta ,aqua);
+    display: flex;
+    flex-direction: row;
+    width:100vw;
+    height:100vw;
+}
+.one {
+    width:50%;
+    align-items: center;
+}
+.one #myform{
+    margin-top: 15%;
+    margin-left: 45%;
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    width:110%;
+    height: 80%;
+}
+</style>
+</head>
+<body>
+<section class="sec1">
+<div class="one">
+<center>
+<div id="myform"><br><br>
+<h1>View your Question and Answers</h1><br><br>
+<p>View :</p><br><br>
+<table border="1" cellpadding="7">
+<thead>
+<tr>
+<th>Email</th>
+<th>qid</th>
+<th>Questions</th>
+<th>Answers</th>
+<th>Update</th>
+<th>Delete</th>
+</tr>
+</thead>
+<tbody>
+{% for i in data %}
+{% for j in data[i]['q_id'] %}
+<tr>
+<td>{{i}}</td>
+<td>{{j}}</td>
+<td>{{data[i]['q_id'][j]['q_text']}}</td>
+<td>{{data[i]['q_id'][j]['q_ans']}}</td>
+
+
+<td><a href="{{url_for('update',uemail=uemail,q_no=j)}}">update</a></td>
+<td><a href="{{url_for('q_delete',uemail=uemail,q_no=j)}}">delete</a></td>
+
+
+{% endfor %}
+{% endfor %}
+</tr>
+<!-- More rows can be added here dynamically through backend -->
+</tbody>
+</table>
+</div>
+</div>
+</section>
+</center>
+</body>
+</html>
